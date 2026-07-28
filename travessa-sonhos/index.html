@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travessa dos Sonhos | Sobremesas Feitas com Amor</title>
+  <meta name="description" content="Travessa dos Sonhos — sobremesas artesanais feitas com amor. Pavê Tradicional, Palha Italiana e Bombom de Uva. Peça pelo WhatsApp!">
+  <meta name="theme-color" content="#FBF6F1">
+
+  <link rel="icon" type="image/jpeg" href="assets/logo-travessa.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sprite de ícones (sem emojis) -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="icon-heart" viewBox="0 0 24 24">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24">
+      <path d="M12 2l1.8 5.4L19 9l-5.2 1.6L12 16l-1.8-5.4L5 9l5.2-1.6L12 2z"/>
+    </symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 32 32">
+      <path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.7 4.61 1.906 6.475L4 29l7.71-1.878A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3Zm0 21.7c-2.05 0-3.955-.6-5.56-1.633l-.399-.25-4.573 1.114 1.155-4.457-.26-.412A9.65 9.65 0 0 1 6.3 15c0-5.352 4.35-9.7 9.701-9.7 5.352 0 9.7 4.348 9.7 9.7 0 5.352-4.348 9.7-9.7 9.7Zm5.34-7.27c-.293-.147-1.734-.856-2.003-.955-.269-.098-.465-.147-.66.147-.196.293-.758.955-.929 1.15-.171.196-.343.22-.636.074-.293-.147-1.236-.456-2.354-1.454-.87-.776-1.458-1.734-1.629-2.027-.171-.293-.018-.451.129-.598.132-.132.293-.343.44-.514.147-.171.196-.293.293-.489.098-.196.049-.367-.024-.514-.074-.147-.66-1.594-.905-2.183-.238-.572-.48-.494-.66-.503l-.562-.01c-.196 0-.514.073-.783.367-.269.293-1.026 1.003-1.026 2.444 0 1.442 1.05 2.836 1.196 3.032.147.196 2.067 3.157 5.008 4.427.7.302 1.246.482 1.672.617.702.223 1.341.192 1.847.117.563-.084 1.734-.709 1.978-1.393.245-.685.245-1.271.171-1.393-.073-.122-.269-.196-.562-.343Z"/>
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5511953349368?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20na%20Travessa%20dos%20Sonhos."
+     class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg class="icon" width="28" height="28" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+  </a>
+
+  <!-- Cabeçalho / Navegação -->
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#topo" class="brand-mini">
+        <img src="assets/logo-travessa.jpeg" alt="" class="brand-mini__logo" width="38" height="38">
+        <span class="brand-mini__text">Travessa <span class="brand-mini__accent">dos Sonhos</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#missao">Missão &amp; Valores</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#entrega">Entrega</a>
+        <a href="#contato" class="nav__cta">Fazer Pedido</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <img class="hero__logo" src="assets/logo-travessa.jpeg" alt="Travessa dos Sonhos — Sobremesas feitas com amor" width="260" height="260">
+
+      <div class="hero__actions">
+        <a href="https://wa.me/5511953349368?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20na%20Travessa%20dos%20Sonhos."
+           class="btn btn--whatsapp" target="_blank" rel="noopener">
+          <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+          Fazer Pedido pelo WhatsApp
+        </a>
+        <a href="#cardapio" class="btn btn--outline">
+          Visualizar Cardápio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="section reveal">
+    <div class="container">
+      <div class="divider" aria-hidden="true"><svg class="icon icon--gold" width="14" height="14"><use href="#icon-heart"></use></svg></div>
+      <h2 class="section-title">Sobre</h2>
+
+      <p class="sobre__text">
+        É uma alegria fazer parte dos seus momentos especiais. Cada travessa carrega
+        mais que sabor: carrega carinho, dedicação e o desejo de tornar seus momentos
+        inesquecíveis.
+      </p>
+      <p class="sobre__text">
+        Feitas com amor, para adoçar histórias e criar memórias — que cada travessa
+        leve até você muito mais que sabor: leve amor, carinho e boas lembranças.
+      </p>
+
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <span class="highlight-card__icon"><svg class="icon" width="26" height="26"><use href="#icon-heart"></use></svg></span>
+          <p>Feito com amor em cada detalhe</p>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-card__icon"><svg class="icon" width="26" height="26"><use href="#icon-sparkle"></use></svg></span>
+          <p>Ingredientes de qualidade</p>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-card__icon"><svg class="icon" width="26" height="26"><use href="#icon-heart"></use></svg></span>
+          <p>Para momentos inesquecíveis</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Missão, Visão e Valores -->
+  <section id="missao" class="section section--tint reveal">
+    <div class="container">
+      <div class="divider" aria-hidden="true"><svg class="icon icon--gold" width="14" height="14"><use href="#icon-heart"></use></svg></div>
+      <h2 class="section-title">Missão, Visão &amp; Valores</h2>
+
+      <div class="mvv-grid">
+        <article class="mvv-card">
+          <h3>Missão</h3>
+          <p>Adoçar momentos especiais com sobremesas feitas com amor, qualidade e
+            carinho, levando felicidade para as famílias e tornando cada ocasião
+            ainda mais inesquecível.</p>
+        </article>
+
+        <article class="mvv-card">
+          <h3>Visão</h3>
+          <p>Ser referência em sobremesas artesanais, reconhecida pelo sabor, pelo
+            atendimento acolhedor e por transformar sonhos em momentos doces e
+            especiais.</p>
+        </article>
+
+        <article class="mvv-card mvv-card--values">
+          <h3>Valores</h3>
+          <ul class="heart-list">
+            <li><svg class="icon icon--rose" width="15" height="15"><use href="#icon-heart"></use></svg> Amor em cada detalhe</li>
+            <li><svg class="icon icon--rose" width="15" height="15"><use href="#icon-heart"></use></svg> Qualidade sem compromissos</li>
+            <li><svg class="icon icon--rose" width="15" height="15"><use href="#icon-heart"></use></svg> Respeito e confiança com nossos clientes</li>
+            <li><svg class="icon icon--rose" width="15" height="15"><use href="#icon-heart"></use></svg> Carinho que se sente em cada mordida</li>
+            <li><svg class="icon icon--rose" width="15" height="15"><use href="#icon-heart"></use></svg> Dedicação para tornar cada momento único</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos (carrossel) -->
+  <section id="produtos" class="section reveal">
+    <div class="container">
+      <div class="divider" aria-hidden="true"><svg class="icon icon--gold" width="14" height="14"><use href="#icon-heart"></use></svg></div>
+      <h2 class="section-title">Nossos Produtos</h2>
+      <p class="section-subtitle">
+        Cada travessa é preparada à mão, com ingredientes selecionados e muito carinho.
+      </p>
+    </div>
+
+    <div class="carousel">
+      <button class="carousel__arrow carousel__arrow--prev" id="carouselPrev" aria-label="Produto anterior">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24"><use href="#icon-arrow" transform="rotate(180 12 12)"></use></svg>
+      </button>
+
+      <div class="carousel__viewport">
+        <ul class="carousel__track" id="carouselTrack">
+          <li class="carousel__slide">
+            <img src="assets/produtos/pave-tradicional.png" alt="Pavê Tradicional — Travessa dos Sonhos" loading="lazy" style="object-position: center 38%;">
+            <span class="carousel__caption">Pavê Tradicional</span>
+          </li>
+          <li class="carousel__slide">
+            <img src="assets/produtos/pave-pote.png" alt="Pavê Tradicional Unitário 250ml — Travessa dos Sonhos" loading="lazy" style="object-position: center 60%;">
+            <span class="carousel__caption">Pavê Unitário 250ml</span>
+          </li>
+          <li class="carousel__slide">
+            <img src="assets/produtos/palha-italiana.png" alt="Palha Italiana — Travessa dos Sonhos" loading="lazy" style="object-position: center 42%;">
+            <span class="carousel__caption">Palha Italiana</span>
+          </li>
+        </ul>
+      </div>
+
+      <button class="carousel__arrow carousel__arrow--next" id="carouselNext" aria-label="Próximo produto">
+        <svg class="icon" width="20" height="20"><use href="#icon-arrow"></use></svg>
+      </button>
+    </div>
+
+    <div class="carousel__dots" id="carouselDots"></div>
+  </section>
+
+  <!-- Cardápio -->
+  <section id="cardapio" class="section section--tint reveal">
+    <div class="container">
+      <div class="divider" aria-hidden="true"><svg class="icon icon--gold" width="14" height="14"><use href="#icon-heart"></use></svg></div>
+      <h2 class="section-title">Cardápio</h2>
+      <p class="section-subtitle">
+        Cada travessa carrega mais que sabor: carrega carinho, dedicação e o desejo
+        de tornar seus momentos inesquecíveis.
+      </p>
+
+      <div class="menu">
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <svg class="icon icon--gold" width="15" height="15" aria-hidden="true"><use href="#icon-heart"></use></svg>
+            <h3>Pavê Tradicional</h3>
+          </div>
+          <ul class="menu__prices">
+            <li><span>Unitário 250ml</span><span class="dots"></span><span class="price">R$ 12,00</span></li>
+            <li><span>Travessa P</span><span class="dots"></span><span class="price">R$ 70,00</span></li>
+            <li><span>Travessa G</span><span class="dots"></span><span class="price">R$ 100,00</span></li>
+          </ul>
+        </div>
+
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <svg class="icon icon--gold" width="15" height="15" aria-hidden="true"><use href="#icon-heart"></use></svg>
+            <h3>Palha Italiana</h3>
+          </div>
+          <ul class="menu__prices">
+            <li><span>Travessa P</span><span class="dots"></span><span class="price">R$ 60,00</span></li>
+            <li><span>Travessa G</span><span class="dots"></span><span class="price">R$ 80,00</span></li>
+          </ul>
+        </div>
+
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <svg class="icon icon--gold" width="15" height="15" aria-hidden="true"><use href="#icon-heart"></use></svg>
+            <h3>Bombom de Uva</h3>
+          </div>
+          <ul class="menu__prices">
+            <li><span>Travessa P</span><span class="dots"></span><span class="price">R$ 80,00</span></li>
+            <li><span>Travessa G</span><span class="dots"></span><span class="price">R$ 100,00</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="notice-box">
+        <p>Encomendas com no mínimo <strong>3 dias de antecedência</strong> para a data da entrega ou retirada.</p>
+        <p class="notice-box__pink">Consulte a taxa de entrega para sua região.</p>
+        <a href="https://wa.me/5511953349368?text=Ol%C3%A1!%20Vim%20pelo%20card%C3%A1pio%20e%20gostaria%20de%20fazer%20um%20pedido."
+           class="btn btn--whatsapp btn--small" target="_blank" rel="noopener">
+          <svg class="icon" width="17" height="17" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+          11 95334-9368
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Forma de Entrega -->
+  <section id="entrega" class="section reveal">
+    <div class="container">
+      <div class="divider" aria-hidden="true"><svg class="icon icon--gold" width="14" height="14"><use href="#icon-heart"></use></svg></div>
+      <h2 class="section-title">Forma de Entrega</h2>
+
+      <div class="entrega-grid">
+        <article class="entrega-card">
+          <h3>Encomendas</h3>
+          <ul class="heart-list">
+            <li><svg class="icon icon--rose" width="15" height="15"><use href="#icon-heart"></use></svg> Pedidos com mínimo de 3 dias de antecedência</li>
+            <li><svg class="icon icon--rose" width="15" height="15"><use href="#icon-heart"></use></svg> Produção sob encomenda</li>
+          </ul>
+        </article>
+
+        <article class="entrega-card">
+          <h3>Entrega / Retirada</h3>
+          <ul class="heart-list">
+            <li><svg class="icon icon--rose" width="15" height="15"><use href="#icon-heart"></use></svg> Retirada no local</li>
+            <li><svg class="icon icon--rose" width="15" height="15"><use href="#icon-heart"></use></svg> Entrega a combinar — consulte a taxa para sua região</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section section--tint contato reveal">
+    <div class="container">
+      <div class="divider" aria-hidden="true"><svg class="icon icon--gold" width="14" height="14"><use href="#icon-heart"></use></svg></div>
+      <h2 class="section-title">Faça seu Pedido</h2>
+      <p class="section-subtitle">
+        Fale com a gente pelo WhatsApp e encomende sua sobremesa favorita.
+      </p>
+
+      <a href="https://wa.me/5511953349368?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20na%20Travessa%20dos%20Sonhos."
+         class="btn btn--whatsapp btn--large" target="_blank" rel="noopener">
+        <svg class="icon" width="22" height="22" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+        (11) 95334-9368
+      </a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__script">Volte sempre <svg class="icon icon--rose-soft" width="18" height="18" aria-hidden="true"><use href="#icon-heart"></use></svg></p>
+      <img class="footer__logo" src="assets/logo-travessa.jpeg" alt="Travessa dos Sonhos" width="88" height="88">
+      <p class="footer__copy">&copy; <span id="year"></span> Travessa dos Sonhos. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

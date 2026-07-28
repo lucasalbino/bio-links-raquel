@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Links</title>
+<style>
+  :root {
+    --bg-top: #fff4ec;
+    --bg-bottom: #ffe2c9;
+    --btn: #ffcda6;
+    --btn-active: #ffb98a;
+    --text: #6b3e26;
+    --shadow: rgba(107, 62, 38, 0.18);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  }
+
+  body {
+    min-height: 100dvh;
+    background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 40px;
+  }
+
+  .profile {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .profile-avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    box-shadow: 0 6px 16px var(--shadow);
+    overflow: hidden;
+  }
+
+  .profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    margin: 0 0 6px;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin: 0;
+  }
+
+  .links {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .link-btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 18px 20px;
+    background: var(--btn);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 1.05rem;
+    box-shadow: 0 4px 14px var(--shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .link-btn .icon {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .link-btn .icon svg {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease;
+  }
+
+  .link-btn span.label {
+    flex: 1;
+    line-height: 1.25;
+  }
+
+  .link-btn .arrow {
+    width: 18px;
+    height: 18px;
+    opacity: 0.55;
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+  }
+
+  @media (hover: hover) {
+    .link-btn:hover {
+      background: var(--btn-active);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px var(--shadow);
+    }
+
+    .link-btn:hover .icon svg {
+      transform: scale(1.12) rotate(-4deg);
+    }
+
+    .link-btn:hover .arrow {
+      transform: translateX(4px);
+    }
+  }
+
+  .link-btn.pressed,
+  .link-btn:active {
+    background: var(--btn-active);
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+
+  footer {
+    margin-top: 40px;
+    font-size: 0.75rem;
+    opacity: 0.55;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <div class="profile">
+    <div class="profile-avatar">
+      <img src="assets/img-avatar.png" alt="Foto de perfil">
+    </div>
+    <h1>Raquel Gonçalves</h1>
+    <p class="subtitle">Escolha uma loja para visitar</p>
+  </div>
+
+  <nav class="links">
+    <!-- TODO: substituir pelo link real da Travessa dos Sonhos -->
+    <a class="link-btn" href="#" target="_blank" rel="noopener">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 20.5s-7.5-4.6-9.8-9.1C.6 7.9 2.3 4.5 5.6 4c2-.3 3.7.6 4.9 2.2a5.2 5.2 0 0 1 1.5-1.6c1.5-1 3.5-1 5-.1 2.9 1.5 3.7 5 2.1 8.1C16.9 16.4 12 20.5 12 20.5z"/>
+        </svg>
+      </span>
+      <span class="label">Travessa dos Sonhos</span>
+      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 6l6 6-6 6"/>
+      </svg>
+    </a>
+
+    <!-- TODO: substituir pelo link real da SR Semijoias By Raquel -->
+    <a class="link-btn" href="#" target="_blank" rel="noopener">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 3h12l3 5-9 13L3 8z"/>
+          <path d="M3 8h18"/>
+          <path d="M9 3l-2 5 5 13 5-13-2-5"/>
+        </svg>
+      </span>
+      <span class="label">SR Semijoias By Raquel</span>
+      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 6l6 6-6 6"/>
+      </svg>
+    </a>
+
+    <!-- TODO: substituir pelo link real da Lira Store -->
+    <a class="link-btn" href="#" target="_blank" rel="noopener">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="7" y="2" width="10" height="20" rx="2.2"/>
+          <line x1="11" y1="18.5" x2="13" y2="18.5"/>
+        </svg>
+      </span>
+      <span class="label">Lira Store</span>
+      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 6l6 6-6 6"/>
+      </svg>
+    </a>
+  </nav>
+
+  <footer>&copy; <span id="year"></span> Raquel Gonçalves</footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('.link-btn').forEach(function (btn) {
+      btn.addEventListener('touchstart', function () {
+        btn.classList.add('pressed');
+      }, { passive: true });
+
+      ['touchend', 'touchcancel'].forEach(function (evt) {
+        btn.addEventListener(evt, function () {
+          btn.classList.remove('pressed');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
