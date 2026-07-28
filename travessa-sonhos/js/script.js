@@ -58,54 +58,34 @@
   var track = document.getElementById('carouselTrack');
   var prevBtn = document.getElementById('carouselPrev');
   var nextBtn = document.getElementById('carouselNext');
-  var dotsWrap = document.getElementById('carouselDots');
 
-  if (track && prevBtn && nextBtn && dotsWrap) {
+  if (track && prevBtn && nextBtn) {
     var slides = Array.prototype.slice.call(track.children);
-    var activeIndex = 0;
 
-    slides.forEach(function (slide, i) {
-      var dot = document.createElement('button');
-      dot.className = 'carousel__dot';
-      dot.setAttribute('aria-label', 'Ir para o produto ' + (i + 1));
-      dot.addEventListener('click', function () {
-        slides[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    // Calcula o slide mais próximo do centro do viewport na hora do clique.
+    function getCurrentIndex() {
+      var viewportRect = track.parentElement.getBoundingClientRect();
+      var viewportCenter = viewportRect.left + viewportRect.width / 2;
+      var closest = 0;
+      var closestDist = Infinity;
+      slides.forEach(function (slide, i) {
+        var rect = slide.getBoundingClientRect();
+        var dist = Math.abs((rect.left + rect.width / 2) - viewportCenter);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closest = i;
+        }
       });
-      dotsWrap.appendChild(dot);
-    });
-
-    var dots = Array.prototype.slice.call(dotsWrap.children);
-
-    function setActive(index) {
-      activeIndex = index;
-      dots.forEach(function (dot, i) {
-        dot.classList.toggle('is-active', i === index);
-      });
-    }
-
-    setActive(0);
-
-    if ('IntersectionObserver' in window) {
-      var slideObserver = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              setActive(slides.indexOf(entry.target));
-            }
-          });
-        },
-        { root: track.parentElement, threshold: 0.6 }
-      );
-      slides.forEach(function (slide) { slideObserver.observe(slide); });
+      return closest;
     }
 
     prevBtn.addEventListener('click', function () {
-      var target = Math.max(activeIndex - 1, 0);
+      var target = Math.max(getCurrentIndex() - 1, 0);
       slides[target].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     });
 
     nextBtn.addEventListener('click', function () {
-      var target = Math.min(activeIndex + 1, slides.length - 1);
+      var target = Math.min(getCurrentIndex() + 1, slides.length - 1);
       slides[target].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     });
   }
