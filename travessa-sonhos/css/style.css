@@ -12,6 +12,8 @@
   --color-gold-light: #D9C08F;
   --color-rose: #B23A63;
   --color-rose-soft: #E7B8C9;
+  --color-blue: #3D6E8E;
+  --color-blue-soft: #A9C6D6;
   --color-whatsapp: #25D366;
   --color-whatsapp-dark: #1DA851;
 
@@ -640,6 +642,42 @@ button:focus-visible {
   white-space: nowrap;
 }
 
+/* Destaque Dia dos Pais (temporário) dentro do cardápio único */
+
+.menu__item--special {
+  border: 1.5px solid var(--color-blue);
+  background: linear-gradient(180deg, rgba(61, 110, 142, 0.08), rgba(61, 110, 142, 0) 65%), var(--color-white);
+}
+
+.icon--blue { color: var(--color-blue); }
+
+.tag-special {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--color-blue);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.price--blue {
+  color: var(--color-blue) !important;
+}
+
+.notice-box__instagram {
+  margin-top: 0.75rem !important;
+  font-size: 0.92rem;
+}
+
+.notice-box__instagram a {
+  color: var(--color-rose);
+  font-weight: 700;
+}
+
 .notice-box {
   background: var(--color-white);
   border: 1.5px solid var(--color-gold-light);
@@ -766,6 +804,16 @@ button:focus-visible {
   .menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu__item--special {
+    grid-column: 1 / -1;
+  }
+
+  .menu__item--special .menu__prices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
   }
 
   .carousel__slide {
